@@ -12,13 +12,13 @@ def add_contact():
     try:
         name = input("Enter contact name: ")
         phone = input("Enter contact phone number: ")
-        if phone.length != 11:
+        if len(phone) != 11:
             raise ValueError("Phone number must be 11 digits.")
         else:
             contacts.append(f"{name}: {phone}")
+            print(f"Contact {name} added.")
     except Exception as e:
         print(f"Error adding contact: {e}")
-    print(f"Contact {name} added.")
 
 def remove_contact():
     try:
